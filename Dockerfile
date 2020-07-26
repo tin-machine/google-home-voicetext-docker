@@ -10,5 +10,6 @@ RUN git clone https://github.com/sikkimtemi/google-home-voicetext.git
 WORKDIR google-home-voicetext
 RUN npm install
 RUN patch -uR node_modules/mdns/lib/browser.js < mdns_patch/browser.js.patch
+COPY boot.bash /usr/local/bin/
 
-CMD ["boot.bash"]
+CMD ["/usr/local/bin/boot.bash"]
