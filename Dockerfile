@@ -9,7 +9,6 @@ RUN echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 RUN git clone https://github.com/sikkimtemi/google-home-voicetext.git
 WORKDIR google-home-voicetext
 RUN npm install
-RUN patch node_modules/mdns/lib/browser.js < mdns_patch/browser.js.patch
 RUN mkdir firebase-secret
 COPY boot.bash /usr/local/bin/
 
