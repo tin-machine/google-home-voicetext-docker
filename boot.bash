@@ -8,4 +8,5 @@ service avahi-daemon start
 sleep 3
 node file-server.js &
 node firestore.js &
+sleep 30
 node api-server.js
