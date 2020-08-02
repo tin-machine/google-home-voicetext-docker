@@ -6,7 +6,7 @@ RUN apt-get install -y vim avahi-daemon libavahi-compat-libdnssd-dev locales
 RUN locale-gen ja_JP.UTF-8
 RUN echo "export LANG=ja_JP.UTF-8" >> ~/.bashrc
 
-RUN git clone https://github.com/sikkimtemi/google-home-voicetext.git
+RUN git clone -b fileserver-port-enabling-changes https://github.com/sikkimtemi/google-home-voicetext.git
 WORKDIR google-home-voicetext
 RUN npm install
 RUN mkdir firebase-secret
